@@ -1,0 +1,138 @@
+.technologies {
+  background: var(--white);
+}
+
+.tech-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.tech-category {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: var(--dark);
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+  background: var(--white);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.tech-icon {
+  font-size: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover .tech-icon {
+  transform: scale(1.1);
+}
+
+.tech-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+  text-align: center;
+}
+
+.tech-cta {
+  text-align: center;
+  padding: 50px;
+  background: var(--gradient);
+  border-radius: 20px;
+  color: var(--white);
+}
+
+.tech-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.tech-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+.tech-cta .btn {
+  background: var(--white);
+  color: var(--primary);
+}
+
+.tech-cta .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .tech-categories {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .tech-icon {
+    font-size: 2.5rem;
+  }
+  
+  .tech-name {
+    font-size: 0.85rem;
+  }
+  
+  .category-title {
+    font-size: 1.3rem;
+  }
+  
+  .tech-cta {
+    padding: 35px 25px;
+  }
+  
+  .tech-cta h3 {
+    font-size: 1.5rem;
+  }
+  
+  .tech-cta p {
+    font-size: 1rem;
+  }
+}
+

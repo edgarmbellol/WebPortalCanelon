@@ -1,0 +1,150 @@
+.about {
+  background: var(--white);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--dark);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.about-text strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.value-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.value-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about-content {
+    gap: 50px;
+  }
+  
+  .about-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+  }
+
+  .about-values {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablet pequeño */
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-text h3 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .about-text p {
+    text-align: center;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .about-values {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .value-card {
+    padding: 25px;
+  }
+
+  .value-icon {
+    font-size: 2.2rem;
+  }
+
+  .value-card h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+  .about-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .value-card {
+    padding: 20px;
+  }
+}
+
