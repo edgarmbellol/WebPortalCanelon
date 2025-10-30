@@ -1,43 +1,55 @@
-import { FaHospital, FaUserMd, FaNotesMedical, FaMobileAlt, FaDatabase, FaShieldAlt } from 'react-icons/fa'
+import { FaHospital, FaUserMd, FaNotesMedical, FaMobileAlt, FaDatabase, FaShieldAlt, FaHeadset, FaNetworkWired, FaFileSignature, FaRobot, FaClock } from 'react-icons/fa'
 import './Services.css'
 
 const Services = () => {
   const services = [
     {
-      icon: <FaHospital />,
-      title: 'Sistemas HIS/EMR',
-      description: 'Sistemas de Información Hospitalaria y Registros Médicos Electrónicos completos y personalizables.',
-      features: ['Historia clínica digital', 'Gestión de pacientes', 'Integración HL7/FHIR']
-    },
-    {
-      icon: <FaUserMd />,
-      title: 'Telemedicina',
-      description: 'Plataformas de consulta virtual con videollamadas HD, chat seguro y gestión de recetas digitales.',
-      features: ['Consultas en línea', 'Recetas electrónicas', 'Historial médico']
-    },
-    {
       icon: <FaNotesMedical />,
-      title: 'Gestión de Citas',
-      description: 'Sistema inteligente de agendamiento médico con recordatorios automáticos y gestión de recursos.',
-      features: ['Agendamiento online', 'Recordatorios SMS/Email', 'Gestión de consultorios']
+      title: 'Auditorías clínicas',
+      description: 'Control de glosas, validación de cuentas y trazabilidad de historias clínicas.',
+      features: ['Reglas clínicas configurables', 'Alertas y conciliación', 'Reportes y BI']
+    },
+    {
+      icon: <FaHeadset />,
+      title: 'Mesa de ayuda',
+      description: 'Gestión de tickets para áreas clínicas y TI con SLAs y autoservicio.',
+      features: ['Tickets y colas', 'Portal de autoservicio', 'KPIs y tableros']
+    },
+    {
+      icon: <FaNetworkWired />,
+      title: 'Intranet hospitalaria',
+      description: 'Comunicaciones internas, documentos y flujos aprobatorios centralizados.',
+      features: ['Noticias y documentos', 'Workflows', 'Perfiles y permisos']
+    },
+    {
+      icon: <FaClock />,
+      title: 'Digiturnos',
+      description: 'Turneros y filas inteligentes para admisiones, laboratorio y farmacia.',
+      features: ['Display de llamado', 'Tótem de autogestión', 'Estadísticas en tiempo real']
+    },
+    {
+      icon: <FaFileSignature />,
+      title: 'Consentimientos informados',
+      description: 'Firma digital, plantillas y custodia segura con trazabilidad legal.',
+      features: ['Plantillas dinámicas', 'Firma biométrica', 'Auditoría y custodia']
+    },
+    {
+      icon: <FaRobot />,
+      title: 'Chatbots clínicos',
+      description: 'Atención automatizada para orientación, citas y seguimiento de pacientes.',
+      features: ['WhatsApp/WEB', 'Flujos guiados', 'Derivación a agente']
     },
     {
       icon: <FaMobileAlt />,
-      title: 'Apps para Pacientes',
-      description: 'Aplicaciones móviles que empoderan a los pacientes con acceso a su información de salud.',
-      features: ['Portal del paciente', 'Resultados de estudios', 'Notificaciones push']
-    },
-    {
-      icon: <FaDatabase />,
-      title: 'Laboratorio Clínico',
-      description: 'Software completo para gestión de laboratorios con integración a equipos y reportes automáticos.',
-      features: ['Gestión de muestras', 'Resultados automáticos', 'Control de calidad']
+      title: 'Apps para pacientes',
+      description: 'Citas, resultados, pagos y recordatorios en iOS y Android.',
+      features: ['Portal móvil', 'Notificaciones push', 'Pagos y encuestas']
     },
     {
       icon: <FaShieldAlt />,
-      title: 'Seguridad y Compliance',
-      description: 'Soluciones que cumplen con HIPAA, GDPR y normativas locales de protección de datos médicos.',
-      features: ['Encriptación E2E', 'Auditoría completa', 'Backup automático']
+      title: 'Seguridad y cumplimiento',
+      description: 'Protección de datos médicos y cumplimiento normativo end-to-end.',
+      features: ['Encriptación E2E', 'Auditoría y roles', 'Backups y DRP']
     }
   ]
 
@@ -45,8 +57,8 @@ const Services = () => {
     <section id="servicios" className="services">
       <div className="container">
         <div className="section-title">
-          <h2>Soluciones para el Sector Salud</h2>
-          <p>Software médico especializado para hospitales, clínicas y centros de salud</p>
+          <h2>Soluciones para el sector salud</h2>
+          <p>Nos especializamos en procesos clínicos y operativos de punta a punta</p>
         </div>
 
         <div className="services-grid">

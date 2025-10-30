@@ -6,7 +6,7 @@
   padding-bottom: 80px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background: transparent;
 }
 
 .hero-background {
@@ -39,7 +39,7 @@
 .orb-2 {
   width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: var(--gradient);
   top: 50%;
   right: -100px;
   animation-delay: 5s;
@@ -117,6 +117,12 @@
   line-height: 1.8;
 }
 
+.hero-note {
+  font-size: 0.95rem;
+  color: var(--gray);
+  margin-top: 10px;
+}
+
 .hero-buttons {
   display: flex;
   gap: 20px;
@@ -169,7 +175,7 @@
 .lottie-animation {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 20px 60px rgba(99, 102, 241, 0.2));
+
 }
 
 .scroll-indicator {

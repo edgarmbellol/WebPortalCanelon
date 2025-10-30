@@ -4,14 +4,16 @@ import './Partners.css'
 const Partners = () => {
   const partners = [
     {
+      name: 'Grúas Cranes S.A.S',
+      logo: '/logogruas.png',
+    },
+    {
       name: 'Hospital Divino Salvador',
-      location: 'Sopó, Cundinamarca',
-      type: 'Hospital'
+      logo: '/logo.png',
     },
     {
       name: 'Hospital San Antonio',
-      location: 'Sesquilé, Cundinamarca',
-      type: 'Hospital'
+      logo: '/logosesquiel.jpg',
     }
   ]
 
@@ -25,13 +27,15 @@ const Partners = () => {
 
         <div className="partners-grid">
           {partners.map((partner, index) => (
-            <div key={index} className="partner-card">
-              <div className="partner-icon">
-                <FaHospital />
+            <div key={index} className="partner-card compact">
+              <div className={`partner-logo-wrap`}>
+                {partner.logo ? (
+                  <img src={partner.logo} alt={`Logo de ${partner.name}`} className="partner-logo" />
+                ) : (
+                  <FaHospital className="partner-fallback" />
+                )}
               </div>
-              <h3>{partner.name}</h3>
-              <p className="partner-location">{partner.location}</p>
-              <span className="partner-type">{partner.type}</span>
+              <p className="partner-name">{partner.name}</p>
             </div>
           ))}
         </div>

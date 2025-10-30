@@ -21,7 +21,12 @@
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--dark);
-  background: var(--white);
+  background:
+    radial-gradient(1200px 1200px at -150px 200px, rgba(102, 126, 234, 0.28), transparent 65%),
+    radial-gradient(1400px 1400px at calc(100% + 250px) 75%, rgba(245, 87, 108, 0.28), transparent 65%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed, fixed, fixed;
   line-height: 1.6;
   overflow-x: hidden;
 }

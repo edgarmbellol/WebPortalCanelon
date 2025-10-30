@@ -31,12 +31,6 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="hero" ref={sectionRef}>
-      <div className="hero-background">
-        <div className="gradient-orb orb-1"></div>
-        <div className="gradient-orb orb-2"></div>
-        <div className="gradient-orb orb-3"></div>
-      </div>
-
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
@@ -59,20 +53,7 @@ const Hero = () => {
                 Ver Portfolio
               </a>
             </div>
-            <div className="hero-stats">
-              <div className="stat">
-                <h3>50+</h3>
-                <p>Hospitales Atendidos</p>
-              </div>
-              <div className="stat">
-                <h3>100K+</h3>
-                <p>Pacientes Gestionados</p>
-              </div>
-              <div className="stat">
-                <h3>10+</h3>
-                <p>Años en Salud Digital</p>
-              </div>
-            </div>
+            <p className="hero-note">Soluciones confiables y escalables, diseñadas a tu medida.</p>
           </div>
 
           <div className="hero-animation">
@@ -87,12 +68,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="scroll-indicator">
-        <div className="mouse">
-          <div className="wheel"></div>
-        </div>
-        <p>Scroll</p>
-      </div>
+      {/* Indicador de scroll removido intencionalmente */}
     </section>
   )
 }

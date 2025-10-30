@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
 import './Contact.css'
 
 const Contact = () => {
@@ -95,16 +95,25 @@ const Contact = () => {
             </div>
 
             <div className="social-links">
-              <h4>Síguenos</h4>
+              <h4>Contáctanos</h4>
               <div className="social-icons">
-                <a href="#" aria-label="LinkedIn">
-                  <FaLinkedin />
-                </a>
-                <a href="#" aria-label="GitHub">
-                  <FaGithub />
-                </a>
-                <a href="#" aria-label="WhatsApp">
+                <a
+                  href="https://wa.me/573057499964"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  title="Escríbenos por WhatsApp"
+                >
                   <FaWhatsapp />
+                </a>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=dev@portalcanelon.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Correo"
+                  title="Abrir Gmail para escribirnos"
+                >
+                  <FaEnvelope />
                 </a>
               </div>
             </div>

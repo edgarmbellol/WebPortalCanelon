@@ -11,8 +11,8 @@ const Footer = () => {
           <div className="footer-grid">
             <div className="footer-about">
               <div className="footer-logo">
-                <img src="/logoPortal.png" alt="Portal Development" />
-                <span>Portal Development</span>
+                <img src="/logoPortal.png" alt="Portal Canelón" />
+                <span>Portal Canelón</span>
               </div>
               <p>
                 <strong>Tu enlace con la innovación en salud digital.</strong> Desarrollamos 
@@ -58,7 +58,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-bottom-content">
             <p>
-              © {currentYear} Portal Development. Todos los derechos reservados.
+              © {currentYear} Portal Canelón. Todos los derechos reservados.
             </p>
             <p className="footer-love">
               Hecho con <FaHeart className="heart-icon" /> para transformar el mundo digital

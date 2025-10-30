@@ -5,23 +5,27 @@ const About = () => {
   const values = [
     {
       icon: <FaShieldAlt />,
-      title: 'Seguridad',
-      description: 'Protección total de datos médicos con encriptación y cumplimiento normativo garantizado.'
+      title: 'Seguridad de datos',
+      description: 'Protegemos tu información con cifrado, permisos por usuarios y registro de actividades.',
+      accent: 'primary'
     },
     {
       icon: <FaUsers />,
-      title: 'Experiencia Médica',
-      description: 'Más de 10 años desarrollando software específicamente para el sector salud.'
+      title: 'Experiencia en salud',
+      description: '10+ años construyendo soluciones para hospitales, clínicas y EPS. Hablamos el lenguaje clínico.',
+      accent: 'teal'
     },
     {
       icon: <FaRocket />,
-      title: 'Innovación',
-      description: 'Incorporamos las últimas tecnologías para mejorar la atención al paciente.'
+      title: 'Innovación aplicada',
+      description: 'IA, integraciones entre sistemas y automatización para reducir tiempos de atención.',
+      accent: 'purple'
     },
     {
       icon: <FaAward />,
-      title: 'Certificaciones',
-      description: 'Cumplimos con HIPAA, ISO 27001 y estándares internacionales de salud digital.'
+      title: 'Calidad comprobada',
+      description: 'Buenas prácticas, pruebas automatizadas y despliegues seguros para minimizar errores.',
+      accent: 'amber'
     }
   ]
 
@@ -37,38 +41,26 @@ const About = () => {
           <div className="about-text">
             <h3>Expertos en tecnología hospitalaria</h3>
             <p>
-              Somos <strong>Santiago Bello</strong> y <strong>Edgar Mauricio Bello</strong>, un equipo 
-              de ingenieros especializados en soluciones tecnológicas para el sector salud. Nuestra 
-              combinación única de conocimientos en sistemas de información y desarrollo de software 
-              nos permite crear soluciones integrales y efectivas.
+              Somos un equipo especializado en salud digital. Combinamos administración de sistemas
+              hospitalarios y desarrollo de software para crear soluciones seguras, interoperables
+              y centradas en el paciente.
             </p>
             <p>
-              <strong>Santiago Bello</strong>, ingeniero de sistemas con más de 6 años de experiencia 
-              en el sector salud, se especializa en administración de sistemas de información hospitalaria. 
-              Su amplio conocimiento en múltiples plataformas y su visión estratégica garantizan 
-              soluciones robustas y escalables.
-            </p>
-            <p>
-              <strong>Edgar Mauricio Bello</strong>, ingeniero mecatrónico con énfasis en desarrollo 
-              de software, aporta más de 2 años de experiencia desarrollando soluciones tecnológicas 
-              específicas para hospitales. Su enfoque en la innovación y automatización permite 
-              crear herramientas que realmente transforman los procesos hospitalarios.
-            </p>
-            <p>
-              Juntos, entendemos profundamente los desafíos del sector salud: desde la integración 
-              con sistemas legacy hasta el cumplimiento normativo, pasando por la necesidad de 
-              interfaces intuitivas que faciliten el trabajo del personal médico. Desarrollamos 
-              software que no solo funciona, sino que mejora la eficiencia operativa y contribuye 
-              a una mejor atención al paciente.
+              Con experiencia directa en hospitales y en la integración de sistemas, entregamos
+              productos robustos, escalables y fáciles de usar que mejoran la operación clínica.
             </p>
           </div>
 
-          <div className="about-values">
+          <div className="about-values feature-grid">
             {values.map((value, index) => (
-              <div key={index} className="value-card">
-                <div className="value-icon">{value.icon}</div>
-                <h4>{value.title}</h4>
-                <p>{value.description}</p>
+              <div key={index} className={`feature-card feature-${value.accent}`}>
+                <div className="feature-icon">{value.icon}</div>
+                <div className="feature-content">
+                  <div className="feature-header">
+                    <h4>{value.title}</h4>
+                  </div>
+                  <p>{value.description}</p>
+                </div>
               </div>
             ))}
           </div>
