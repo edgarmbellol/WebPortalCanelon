@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
+import emailjs from '@emailjs/browser'
 import './Contact.css'
 
 const Contact = () => {
@@ -10,6 +11,16 @@ const Contact = () => {
     subject: '',
     message: ''
   })
+  const [sending, setSending] = useState(false)
+
+  // IMPORTANTE: Reemplaza estos valores con los tuyos de EmailJS
+  // 1. Ve a https://www.emailjs.com/ y regístrate
+  // 2. Crea un servicio de email (Gmail/Outlook)
+  // 3. Crea una plantilla con variables: {{from_name}}, {{from_email}}, {{phone}}, {{subject}}, {{message}}
+  // 4. Copia tus IDs y reemplázalos aquí:
+  const EMAILJS_SERVICE_ID = 'service_fvh8srk'  // Ej: 'service_abc123'
+  const EMAILJS_TEMPLATE_ID = 'template_fcmzxwq'  // Ej: 'template_xyz789'
+  const EMAILJS_PUBLIC_KEY = 'oUOtU0QjFrllcQh-q'  // Ej: 'abcdefg123456'
 
   const handleChange = (e) => {
     setFormData({
@@ -18,18 +29,42 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Aquí implementarías la lógica de envío del formulario
-    console.log('Form submitted:', formData)
-    alert('¡Gracias por contactarnos! Te responderemos pronto.')
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    })
+    setSending(true)
+
+    try {
+      // Enviar email usando EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone || 'No proporcionado',
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'dev@portalcanelon.com'  // Email destino
+        },
+        EMAILJS_PUBLIC_KEY
+      )
+
+      alert('✅ ¡Mensaje enviado! Te responderemos pronto.')
+      
+      // Limpiar formulario
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      })
+    } catch (error) {
+      console.error('Error enviando email:', error)
+      alert('❌ Hubo un error al enviar el mensaje. Por favor, intenta por WhatsApp o email directo.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -186,8 +221,8 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button type="submit" className="btn btn-primary btn-submit">
-              Enviar Mensaje
+            <button type="submit" className="btn btn-primary btn-submit" disabled={sending}>
+              {sending ? 'Enviando...' : 'Enviar Mensaje'}
             </button>
           </form>
         </div>

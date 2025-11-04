@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { FaWhatsapp } from 'react-icons/fa'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -32,6 +33,17 @@ function App() {
       <Partners />
       <Contact />
       <Footer />
+      
+      {/* Botón flotante de WhatsApp */}
+      <a
+        href="https://wa.me/573057499964?text=Hola%2C%20quiero%20información%20sobre%20sus%20servicios"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-float"
+        aria-label="Contactar por WhatsApp"
+      >
+        <FaWhatsapp />
+      </a>
     </div>
   )
 }
